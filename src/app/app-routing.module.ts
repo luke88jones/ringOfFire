@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { NewGameComponent } from './new-game/new-game.component';
+
 const routes: Routes = [
   {
     path: '',
-    children: []
+    redirectTo: '/new',
+    pathMatch: 'full'
+  },
+  {
+    path: 'new',
+    component: NewGameComponent
   }
 ];
 

@@ -1,0 +1,38 @@
+.players-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.players-form {
+    max-height: 500px;
+    overflow-y: none;
+    position: relative;
+
+    h2 {
+        color: #f15c24;
+        font-size: 35px;
+        font-weight: bold;
+        font-family: Roost, Helvetica, Arial, sans-serif;
+    }
+
+    ol {
+        font-size: 25px;
+        margin-left: 40px;
+    }
+
+    .remove-icon {
+        float: right;
+        cursor: pointer;        
+    }
+
+    .content {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .footer {
+        margin-top: 30px;
+        text-align: center;        
+    }
+}

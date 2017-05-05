@@ -1,0 +1,23 @@
+<div class="card bordered-container" [class.red]="isRed">
+  <div *ngIf="showCard">
+    <div class="top-left">
+        <span>{{card.rank}} </span><span [innerHTML]="displaySuit"></span>
+    </div>
+
+    <div class="rule">
+        <p class="rule-name">
+            {{forfeit[0]}}
+        </p>
+        <span>{{forfeit[1]}}</span>
+    </div>
+
+    <div class="bottom-right">
+        <span>{{card.rank}} </span><span [innerHTML]="displaySuit"></span>
+    </div>
+  </div>
+  <div class="reverse-card" *ngIf="!showCard">
+      R<br>
+      O<br>
+      F<br>
+  </div>
+</div>

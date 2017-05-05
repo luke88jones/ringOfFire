@@ -1,0 +1,17 @@
+<div class="players-container">
+    <div class="bordered-container players-form">
+        <h2>Who's playing?</h2>        
+        <div class="content">
+            <ol *ngIf="players.length > 0">
+                <li *ngFor="let player of players; let i = index">
+                    <span>{{player.name}}</span>
+                    <span class="glyphicon glyphicon-remove-sign text-danger remove-icon" (click)="removePlayer(i)"></span>
+                </li>
+            </ol>
+            <rof-new-player-form (added)="updatePlayers($event)"></rof-new-player-form>
+        </div>
+        <div class="footer">
+            <button class="btn btn-success rof-btn rof-btn-lg" [disabled]="players.length < 2" routerLink="/game-board">Start Game</button>
+        </div>
+    </div>
+</div>

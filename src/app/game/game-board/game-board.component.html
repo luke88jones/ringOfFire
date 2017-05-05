@@ -1,0 +1,18 @@
+<div class="game-board-container bordered-container">
+    <div class="active-game">
+        <div class="left-panel">
+            <p>{{state.currentPlayer.name}}</p>
+            <p>it's your turn!</p>    
+            <button class="btn btn-primary rof-btn rof-btn-lg" *ngIf="!cardDrawn" (click)="showCard()">Draw card!</button>
+            <button class="btn btn-primary rof-btn rof-btn-lg" *ngIf="cardDrawn" (click)="nextTurn()">End turn</button>
+        </div>
+        <div class="right-panel">
+            <p>Remaining cards: {{remaingCards}}</p>
+            <rof-card [card]="state.currentCard" [showCard]="cardDrawn"></rof-card>
+        </div>
+    </div>
+    <!--<div class="kings-indicator">
+        <div class="cup-outer"></div>
+        <div class="cup-inner" [ngStyle]="{ height: getHeight() }"></div>
+    </div>  -->
+</div>

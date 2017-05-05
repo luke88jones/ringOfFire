@@ -1,0 +1,11 @@
+<form class="new-player-form" (ngSubmit)="onSubmit(); playerForm.form.reset()" #playerForm="ngForm" novalidate autocomplete="off">
+    <div>
+        <input type="text" [(ngModel)]="player.name" name="name" placeholder="New player name" required #name="ngModel">
+        <button class="btn btn-link" type="submit" [disabled]="!playerForm.form.valid">
+            <span class="glyphicon glyphicon-plus-sign text-success"></span>
+        </button>
+    </div>
+    <div [hidden]="name.valid || name.pristine" class="invalid text-danger">
+        Player name is required
+    </div>
+</form>

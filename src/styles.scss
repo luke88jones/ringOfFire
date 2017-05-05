@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_normalize.scss";
+
+$icon-font-path: "./assets/fonts/bootstrap/" !default;
+// Core variables and mixins
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Utility classes
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+.rof-btn {
+    border-radius: 16px 1px;
+    box-shadow: 0 0 0 2px white inset;
+    border-width: 2px;
+}
+
+.rof-btn-lg {
+    padding: 10px 40px;
+    font-size: 25px;
+}
+
+$text-header: #f15c24;
+$border: #a77042;
+
+.bordered-container {
+    border: 10px solid $border;
+    border-radius: 20px;
+    background-color: white;
+    padding: 0 20px 20px;
+}
