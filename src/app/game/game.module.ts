@@ -7,7 +7,7 @@ import { GameRoutingModule } from './game-routing.module';
 import { PlayersComponent } from './players/players.component';
 import { NewPlayerFormComponent } from './new-player-form/new-player-form.component';
 
-import { DealerService, PlayersService, ForfeitsService, GameStateService } from './shared';
+import { DealerService, PlayersService, ForfeitsService, GameStateService, GameGuard } from './shared';
 import { GameBoardComponent } from './game-board/game-board.component';
 import { CardComponent } from './card/card.component';
 import { GameOverComponent } from './game-over/game-over.component';
@@ -23,6 +23,7 @@ import { GameOverComponent } from './game-over/game-over.component';
   providers: [
     DealerService,
     ForfeitsService,
+    GameGuard,
     GameStateService,
     PlayersService
   ]

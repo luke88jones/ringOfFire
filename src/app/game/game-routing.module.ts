@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlayersComponent } from './players/players.component';
 import { GameBoardComponent } from './game-board/game-board.component';
 import { GameOverComponent } from './game-over/game-over.component';
+import { GameGuard } from './shared';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'game-board',
-    component: GameBoardComponent
+    component: GameBoardComponent,
+    canActivate: [GameGuard]
   },
   {
     path: 'game-over',
